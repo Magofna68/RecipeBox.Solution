@@ -11,7 +11,7 @@
 @if (Model.Any())
 {
   <ul>
-    @foreach (Recipe recipe in Model)
+  @foreach (Recipe recipe in Model)
     {
       <li>@Html.ActionLink($"{recipe.Name}", "Details", new { id = recipe.RecipeId })</li>
     }
@@ -22,5 +22,5 @@ else
   <h3>No recipies have been added yet!</h3>
 }
 
-<p>@Html.ActionLink("Add new item", "Create")</p>
+<p>@Html.ActionLink("Add new recipe", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

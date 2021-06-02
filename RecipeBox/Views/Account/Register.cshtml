@@ -12,12 +12,12 @@
 {
   @Html.LabelFor(user => user.Email)
   @Html.TextBoxFor(user=> user.Email)
-
+  <hr />
   @Html.LabelFor(user=> user.Password)
   @Html.PasswordFor(user=> user.Password)
 
   @Html.LabelFor(user=> user.ConfirmPassword)
   @Html.PasswordFor(user=> user.ConfirmPassword)
-
+  <hr />
   <input type="submit" value="Register" />
 }

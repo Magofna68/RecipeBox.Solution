@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using RecipeBox.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace RecipeBox
 {
@@ -20,6 +21,7 @@ namespace RecipeBox
 
     public IConfigurationRoot Configuration { get; set; }
 
+
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc();
@@ -27,17 +29,28 @@ namespace RecipeBox
       services.AddEntityFrameworkMySql()
         .AddDbContext<RecipeBoxContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
+
+      services.AddIdentity<ApplicationUser, IdentityRole>()
+            .AddEntityFrameworkStores<RecipeBoxContext>()
+            .AddDefaultTokenProviders();
+
+      services.Configure<IdentityOptions>(options =>
+      {
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 0;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequiredUniqueChars = 0;
+      });
     }
-    // Here we've added a form of Entity that understands MySQL as a service.
-
-    // We've also configured that service to use a particular database context with the AddDbContext() method, which will be a representation of our database.
-
-    // We further configure Entity Framework to use our default connection by passing it to the UseMySQL() method.
 
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
+      app.UseAuthentication();
       app.UseRouting();
+      app.UseAuthorization();
 
       app.UseEndpoints(routes =>
       {
@@ -48,7 +61,7 @@ namespace RecipeBox
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("I Bet you messed something up!");
       });
     }
   }
