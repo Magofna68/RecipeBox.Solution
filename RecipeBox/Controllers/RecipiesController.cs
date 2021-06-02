@@ -64,7 +64,7 @@ namespace RecipeBox.Controllers
 
     public ActionResult Edit(int id)
     {
-      var thisRecipe = _db.Recipes.FirstOrDefault(Recipe => Recipe.RecipeId == id);
+      var thisRecipe = _db.Recipes.FirstOrDefault(Recipe => recipe.recipeId == id);
       ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View(thisRecipe);
     }
@@ -78,10 +78,10 @@ namespace RecipeBox.Controllers
         _db.CategoryRecipe.Add(new CategoryRecipe()
         {
           CategoryId = categoryId,
-          RecipeId = Recipe.RecipeId
+          RecipeId = recipe.RecipeId
         });
       }
-      _db.Entry(Recipe).State = EntityState.Modified;
+      _db.Entry(recipe).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
