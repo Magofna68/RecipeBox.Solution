@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RecipeBox.Models.Category
+
+<h4>Add a new Category:</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model=>model.Tag)
+  @Html.TextBoxFor(model=>model.Tag)
+
+  @Html.LabelFor(model=> model.Description)
+  @Html.TextBoxFor(model=>model.Desciption)
+
+  <input type="submit" value="Add new category" />
+}
+<p>@Html.ActionLink("Show all categories", "Index")</p>
