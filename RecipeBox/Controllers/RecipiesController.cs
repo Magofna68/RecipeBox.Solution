@@ -11,11 +11,11 @@ using System.Security.Claims;
 
 namespace RecipeBox.Controllers
 {
-  public class RecipeController : Controller
+  public class RecipiesController : Controller
   {
     private readonly RecipeBoxContext _db;
     private readonly UserManager<ApplicationUser> _userManager;
-    public RecipeController(UserManager<ApplicationUser> userManager, RecipeBoxContext db)
+    public RecipiesController(UserManager<ApplicationUser> userManager, RecipeBoxContext db)
     {
       _userManager = userManager;
       _db = db;
