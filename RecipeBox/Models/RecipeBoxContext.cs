@@ -10,7 +10,7 @@ namespace RecipeBox.Models
     public DbSet<CategoryRecipe> CategoryRecipe { get; set; }
     //Each DbSet we've included will become a table in our database. We've previously declared both Categories and Items DbSets, but now include a CategoryItem DbSet as well that represents our join table.
 
-    public ToDoListContext(DbContextOptions options) : base(options) { }
+    public RecipeBoxContext(DbContextOptions options) : base(options) { }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { //Notice that we add the OnConfiguring method to enable lazy-loading.
       optionsBuilder.UseLazyLoadingProxies();

@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace RecipeBox.Models
 {
@@ -14,6 +16,7 @@ namespace RecipeBox.Models
     public int Rating { get; set; }
     public string Ingredients { get; set; }
     public string Instructions { get; set; }
+
     [Display(Name = "Recipe Completed")]
     public bool RecipeCompleted { get; set; }
     public virtual ApplicationUser User { get; set; }
