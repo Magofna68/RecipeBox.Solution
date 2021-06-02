@@ -5,14 +5,14 @@
 @model RecipeBox.Models.Recipe
 
 <h2>Recipe Details:</h2>
-
-<h3>
-  @Html.DisplayNameFor(model=>model.Name): @Html.DisplayFor(model=>model.Name)
-  @Html.DisplayNameFor(model=>model.Rating): @Html.DisplayFor(model=>model.Rating)
-  @Html.DisplayNameFor(model=>model.Ingredients): @Html.DisplayFor(model=>model.Ingredients)
-  @Html.DisplayNameFor(model=>model.Instructions): @Html.DisplayFor(model=>model.Instructions)
-</h3>
-
+<h4>
+  <strong>@Html.DisplayNameFor(model=>model.Name):</strong> @Html.DisplayFor(model=>model.Name)<br><br>
+  <strong>@Html.DisplayNameFor(model=>model.Rating):</strong> @Html.DisplayFor(model=>model.Rating)<br><br>
+  <strong>@Html.DisplayNameFor(model=>model.Ingredients):</strong>
+  @Html.DisplayFor(model=>model.Ingredients)<br><br>
+  <strong>@Html.DisplayNameFor(model=>model.Instructions):</strong> @Html.DisplayFor(model=>model.Instructions)
+</h4>
+<br>
 @if (@Model.JoinEntities.Count == 0)
 {
   <p>This recipe does not belong to any categories</p>
@@ -35,5 +35,5 @@ else
 
 <p>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.RecipeId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RecipeId })</p>
+<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RecipeId })</p>@*//feel like this should be 'CategoryId'*@
 <p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.RecipeId })</p>

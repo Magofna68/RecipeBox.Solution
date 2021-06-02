@@ -1,0 +1,19 @@
+h1 {
+  color: rgb(194, 59, 59);
+  text-align: center;
+}
+
+body {
+  background-image: url("../img/Recipeeeeee.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 80%vh;
+  font-size: 2.5em;
+  background-position: center;
+}
+
+#footer {
+  color: #C37D92;
+  font-size: small;
+  font-weight: bold;
+}

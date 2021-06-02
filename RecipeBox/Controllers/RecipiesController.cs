@@ -100,7 +100,7 @@ namespace RecipeBox.Controllers
     public ActionResult AddCategory(int id)
     {
       var thisRecipe = _db.Recipies.FirstOrDefault(recipe => recipe.RecipeId == id);
-      ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+      ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Tag");//Tag
       return View(thisRecipe);
     }
 

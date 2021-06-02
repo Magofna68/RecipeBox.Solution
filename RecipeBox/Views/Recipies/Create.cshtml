@@ -9,19 +9,28 @@
 {
   @Html.LabelFor(model=>model.Name)
   @Html.TextBoxFor(model=>model.Name)
-
+  <hr />
   @Html.LabelFor(model=>model.Rating)
-  @Html.TextBoxFor(model=>model.Rating)
+  @* @Html.TextBoxFor(model=>model.Rating) *@
 
+  @Html.RadioButtonFor(m => m.Rating, "1")
+  @Html.RadioButtonFor(m => m.Rating, "2")
+  @Html.RadioButtonFor(m => m.Rating, "3")
+  @Html.RadioButtonFor(m => m.Rating, "4")
+  @Html.RadioButtonFor(m => m.Rating, "5")
+
+  <hr />
   @Html.LabelFor(model=>model.Ingredients)
   @Html.TextBoxFor(model=>model.Ingredients)
-
+  <hr />
   @Html.LabelFor(model=>model.Instructions)
   @Html.TextBoxFor(model=>model.Instructions)
-
+  <hr />
   @Html.Label("Select Category")
   @Html.DropDownList("CategoryId")
 
   <input type="submit" value="Add new Recipe" class="btn btn-default" />
 }
+<br>
 <p>@Html.ActionLink("Show all recipies", "Index")</p>
+<hr />

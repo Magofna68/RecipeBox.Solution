@@ -9,9 +9,17 @@
 </head>
 
 <body>
-  @RenderBody()
-  @Html.ActionLink("Home", "Index", "Home", null, new { @class="btn btn-primary btn-block" })
-  @* @Html.Partial("Footer") *@
+  <div class="container">
+    @RenderBody()
+    @* @using (Html.BeginForm("LogOff", "Account"))
+      {
+      <input type="submit" class="btn btn-danger " value="Log out" />
+      } *@
+    <br>
+    @Html.ActionLink("Home", "Index", "Home", null, new { @class="btn btn-primary btn-block" })
+
+    @Html.Partial("Footer")
+  </div>
 </body>
 
 </html>
