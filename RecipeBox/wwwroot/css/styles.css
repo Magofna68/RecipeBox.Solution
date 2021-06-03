@@ -10,10 +10,18 @@ body {
   background-size: 80%vh;
   font-size: 2.5em;
   background-position: center;
+  margin-top: auto;
+  margin-left: auto;
 }
 
 #footer {
   color: #C37D92;
   font-size: small;
   font-weight: bold;
+}
+
+#header {
+  font-size: small;
+  color: black;
+  margin-top: 2%;
 }

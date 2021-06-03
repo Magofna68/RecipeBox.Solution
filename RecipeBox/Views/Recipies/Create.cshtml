@@ -10,15 +10,15 @@
   @Html.LabelFor(model=>model.Name)
   @Html.TextBoxFor(model=>model.Name)
   <hr />
-  @Html.LabelFor(model=>model.Rating)
+  <p>
+  @Html.LabelFor(model=>model.Rating): (1-5)
   @* @Html.TextBoxFor(model=>model.Rating) *@
-
-  @Html.RadioButtonFor(m => m.Rating, "1")
-  @Html.RadioButtonFor(m => m.Rating, "2")
-  @Html.RadioButtonFor(m => m.Rating, "3")
-  @Html.RadioButtonFor(m => m.Rating, "4")
+  @Html.RadioButtonFor(m => m.Rating, "1")&nbsp;
+  @Html.RadioButtonFor(m => m.Rating, "2")&nbsp;
+  @Html.RadioButtonFor(m => m.Rating, "3")&nbsp;
+  @Html.RadioButtonFor(m => m.Rating, "4")&nbsp;
   @Html.RadioButtonFor(m => m.Rating, "5")
-
+</p>
   <hr />
   @Html.LabelFor(model=>model.Ingredients)
   @Html.TextBoxFor(model=>model.Ingredients)

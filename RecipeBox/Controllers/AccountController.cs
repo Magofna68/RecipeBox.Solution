@@ -49,6 +49,7 @@ namespace RecipeBox.Controllers
       return View();
     }
 
+
     [HttpPost]
     public async Task<ActionResult> Login(LoginViewModel model)
     {

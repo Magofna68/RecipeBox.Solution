@@ -10,15 +10,23 @@
 
 <body>
   <div class="container">
+    <partial>
+      <div id="header">Fortune flavors the <strong>BOLD</strong>.</div>
+      @Html.ActionLink("Log in", "Login", "Account", null, new {@class="btn btn-primary"})
+    </partial>
+
     @RenderBody()
-    @* @using (Html.BeginForm("LogOff", "Account"))
-      {
-      <input type="submit" class="btn btn-danger " value="Log out" />
-      } *@
     <br>
     @Html.ActionLink("Home", "Index", "Home", null, new { @class="btn btn-primary btn-block" })
 
-    @Html.Partial("Footer")
+    <partial>
+      <div id="footer">Just make a recipe already..</div>
+      @using (Html.BeginForm("LogOff", "Account"))
+      {
+        <input type="submit" class="btn btn-danger " value="Log out" />
+      }
+    </partial>
+
   </div>
 </body>
 
