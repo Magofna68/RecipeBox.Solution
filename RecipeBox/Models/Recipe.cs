@@ -14,12 +14,11 @@ namespace RecipeBox.Models
     public int RecipeId { get; set; }
     public string Name { get; set; }
     public int Rating { get; set; }
-    public string Ingredients { get; set; }
-    public string Instructions { get; set; }
+  public string Ingredients { get; set; }
+  public string Instructions { get; set; }
 
-    [Display(Name = "Recipe Completed")]
-    public bool RecipeCompleted { get; set; }
-    public virtual ApplicationUser User { get; set; }
-    public virtual ICollection<CategoryRecipe> JoinEntities { get; }
-  }
+  public bool RecipeCompleted { get; set; }
+  public virtual ApplicationUser User { get; set; }
+  public virtual ICollection<CategoryRecipe> JoinEntities { get; }
+}
 }

@@ -57,3 +57,7 @@ _Please reach out through my GitHub account._
 MIT License.
 
 Copyright (c) 2021 **_Brandon Magofna_**
+
+[![Brandon's GitHub stats](https://github-readme-stats.vercel.app/api?username=Magofna68)](https://github.com/anuraghazra/github-readme-stats)
+
+![Brandon's GitHub stats](https://github-readme-stats.vercel.app/api?username=Magofna68&show_icons=true&theme=radical)

@@ -13,7 +13,7 @@
   <p>
   @Html.LabelFor(model=>model.Rating): (1-5)
   @* @Html.TextBoxFor(model=>model.Rating) *@
-  @Html.RadioButtonFor(m => m.Rating, "1")&nbsp;
+  @Html.RadioButtonFor(m => m.Rating, "1", new { @checked = true })&nbsp;
   @Html.RadioButtonFor(m => m.Rating, "2")&nbsp;
   @Html.RadioButtonFor(m => m.Rating, "3")&nbsp;
   @Html.RadioButtonFor(m => m.Rating, "4")&nbsp;

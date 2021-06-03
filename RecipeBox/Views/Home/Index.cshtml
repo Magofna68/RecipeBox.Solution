@@ -8,7 +8,7 @@
 
 <main class="row">
   <div class="col-sm-6 text-center">
-    <h4>Categories</h4>
+    <h2>Categories:</h2>
     @if (@Model["categories"].Count == 0)
     {
       @Html.ActionLink("Add a new category", "Create", "Categories")
@@ -26,7 +26,7 @@
   </div>
 
   <div class="col-sm-6 text-center">
-    <h4>Recipes</h4>
+    <h2>Recipes:</h2>
     @if (@Model["recipes"].Count == 0)
     {
       @Html.ActionLink("Add a new recipe", "Create", "Recipies")
@@ -45,9 +45,14 @@
   </div>
 
 </main>
+<br>
+<br>
 
 
-@* <p>@Html.ActionLink("Log in", "Login", "Account")</p> *@
-<p>@Html.ActionLink("See all recipies", "Index", "Recipies")</p>
-<p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
-<p>@Html.ActionLink("Create an account", "Index", "Account")</p>
+<!-- @Html.ActionLink("See all recipies", "Index", "Recipies", new {style = "color:white"})
+@Html.ActionLink("See all categories", "Index", "Categories", new {style = "color:white"})
+@Html.ActionLink("Create an account", "Index", "Account", new {style = "color:white"}) -->
+
+<p id="action">@Html.ActionLink("See all recipies", "Index", "Recipies")&nbsp;&nbsp;
+  @Html.ActionLink("See all categories", "Index", "Categories")&nbsp;&nbsp;
+  @Html.ActionLink("Create an account", "Index", "Account")</p>
