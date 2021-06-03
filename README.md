@@ -61,3 +61,5 @@ Copyright (c) 2021 **_Brandon Magofna_**
 [![Brandon's GitHub stats](https://github-readme-stats.vercel.app/api?username=Magofna68)](https://github.com/anuraghazra/github-readme-stats)
 
 ![Brandon's GitHub stats](https://github-readme-stats.vercel.app/api?username=Magofna68&show_icons=true&theme=radical)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Magofna68&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
