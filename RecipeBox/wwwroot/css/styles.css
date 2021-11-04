@@ -1,19 +1,49 @@
 h1 {
   color: rgb(194, 59, 59);
   text-align: center;
+  margin: 0 0 10% 0;
+}
+
+h2 {
+  margin: 0 0 10% 0;
 }
 
 body {
-  background-image: url("../img/Recipeeeeee.jpeg");
+  /* background-image: url("../img/Recipeeeeee.jpeg"); */
   /* background-image: url("../img/FoodPlatter.jpeg"); */
+  background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 90%vh;
   font-size: 2.5em;
   background-position: center;
-  margin-top: auto;
+  /* margin-top: auto;
   margin-left: auto;
-  opacity: 0.1;
+  align-items: center;
+  align-content: center;
+  justify-content: center; */
+  /* opacity: 0.1; */
+}
+
+.container {
+  background-position: center;
+  margin-top: auto;
+  padding-top: auto;
+  background-image: url("../img/Recipeeeeee.jpeg");
+  background-blend-mode: rgb(12, 245, 101);
+  background-size: cover;
+  display: cover;
+  margin-top: 5%;
+  margin-left: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5%;
+  opacity: 0.9;
+}
+
+a {
+  color: black;
 }
 
 #footer {
@@ -30,4 +60,12 @@ body {
 #action {
   text-align: center;
   color: white;
+  /* background: red; */
 }
+
+/* button {
+  padding: 0 0;
+  overflow: hidden;
+  margin: 0 0;
+  padding-right: 0;
+} */

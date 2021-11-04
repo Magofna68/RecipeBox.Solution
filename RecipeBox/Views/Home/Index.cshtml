@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-<h1>Welcome to the Recipe Box!</h1>
+<h1>The Recipe Box</h1>
 
 @using RecipeBox.Models
 
@@ -53,6 +53,8 @@
 @Html.ActionLink("See all categories", "Index", "Categories", new {style = "color:white"})
 @Html.ActionLink("Create an account", "Index", "Account", new {style = "color:white"}) -->
 
-<p id="action">@Html.ActionLink("See all recipies", "Index", "Recipies")&nbsp;&nbsp;
-  @Html.ActionLink("See all categories", "Index", "Categories")&nbsp;&nbsp;
-  @Html.ActionLink("Create an account", "Index", "Account")</p>
+<div id="action">
+  @Html.ActionLink("See all recipies", "Index", "Recipies", null, new { @class="btn btn-primary"})
+  @Html.ActionLink("See all categories", "Index", "Categories", null, new { @class="btn btn-primary"})
+  @Html.ActionLink("Create an account", "Index", "Account", null, new { @class="btn btn-primary"})
+</div>
