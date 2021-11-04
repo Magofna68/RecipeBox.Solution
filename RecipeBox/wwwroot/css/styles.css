@@ -4,8 +4,8 @@ h1 {
 }
 
 body {
-  /* background-image: url("../img/Recipeeeeee.jpeg"); */
-  background-image: url("../img/FoodPlatter.jpeg");
+  background-image: url("../img/Recipeeeeee.jpeg");
+  /* background-image: url("../img/FoodPlatter.jpeg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 90%vh;
